@@ -11,5 +11,5 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   base: '/Portal-Student/', // Adjust this to your repo name
-  plugins: [],
+  plugins: [react()],
 });
