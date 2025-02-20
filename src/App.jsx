@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import { Home, Navbar, Sidebar, Assignments, Cgpa, Courses } from "./index.js";
 import { useState } from "react";
 
