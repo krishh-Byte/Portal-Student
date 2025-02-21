@@ -1,4 +1,4 @@
-import { HashRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Home, Navbar, Sidebar, Assignments, Cgpa, Courses } from "./index.js";
 import { useState } from "react";
 import React from "react";
@@ -8,8 +8,8 @@ function App() {
 
   // Grade to Grade Points Mapping
   const gradeToPoint = {
-    A: 4.0, "A-": 3.7, "B+": 3.3, B: 3.0, "B-": 2.7,
-    "C+": 2.3, C: 2.0, "C-": 1.7, D: 1.3, F: 0.0,
+    A: 10.0, "A-": 9.0, "B+": 8, B: 7.0, "B-": 6.0,
+    "C+": 5.0, C: 4.0, "C-": 3.0, D: 2.0, F: 1.0,
   };
 
   // Function to calculate CGPA
