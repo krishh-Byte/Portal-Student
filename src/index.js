@@ -1,5 +1,4 @@
 import Home from "./components/Home";
-import Dashboard from "./components/Dashboard";
 import Cgpa from "./components/CGPA";
 import Courses from "./components/Courses";
 import Assignments from "./components/Assignments";
