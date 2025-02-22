@@ -101,9 +101,18 @@ body {
 /* Main Container - Holds Sidebar + Content */
 .main-container {
   display: flex;
-  margin-top: 50px; /* Prevent content from being hidden under navbar */
+  margin-top: 60px; /* Prevent content from being hidden under navbar */
+  padding-left: 200px; /* Adjusted padding to account for the sidebar width */
 }
 
+/* Content Area (Only This Part Updates) */
+.content {
+  flex-grow: 1;
+  padding: 20px;
+  min-height: calc(100vh - 60px); /* Prevent content from going under navbar */
+  background-color: #f4f4f4;
+  overflow-y: auto; /* Enables scrolling for long content */
+}
 
 /* Sidebar Styles */
 .sidebar {
@@ -142,14 +151,6 @@ body {
 
 
 /* Content Area (Only This Part Updates) */
-.content {
-  margin-left: 200px; /* Same as sidebar width */
-  padding: 20px;
-  width: calc(100% - 200px); /* Prevent overlap with sidebar */
-  min-height: calc(100vh - 50px); /* Prevent content from going under navbar */
-  background-color: #f4f4f4;
-  overflow-y: auto; /* Enables scrolling for long content */
-}
 
 .courses-container {
   padding: 20px;
@@ -306,20 +307,21 @@ h2 {
 .cgpa-box {
   display: inline-block;
   padding: 10px 20px;
-  background-color: #e0f7fa;
-  border-radius: 8px;
+  background-color: #e0f7fa; /* Light blue background */
+  border: 2px solid black; /* Border to make it stand out */
+  border-radius: 8px; /* Rounded corners */
   margin-bottom: 20px;
 }
 
 .cgpa-box h4 {
   font-size: 1.2rem;
-  color: #00796b;
+  /* color: #00796b; Green text color */
 }
 
 .cgpa-box span {
   font-weight: bold;
+  color: #00796b; /* Green text color for CGPA value */
 }
-
 /* CGPA Table */
 .cgpa-table {
   width: 100%;
@@ -454,63 +456,96 @@ h2, h3 {
   background-color: #e9ecef;
 }
 
-
-
-
-/* home container */
-.home-container {
+/* Dashboard Container */
+.dashboard-container {
   padding: 20px;
+  background-color: #f5f5f5;
+  min-height: 100vh;
+}
+
+/* Breadcrumb */
+/* Breadcrumb */
+.breadcrumb {
+  display: flex;
+  flex-wrap: nowrap;
+  list-style: none;
+  margin-bottom: 20px;
+  font-size: 16px;
+  background-color: #f8f9fa;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+}
+
+.breadcrumb-item {
+  display: flex;
+  align-items: center;
+}
+
+.breadcrumb a {
+  color: #007bff; /* Link color */
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.breadcrumb a:hover {
+  color: #0056b3; /* Darker color on hover */
+}
+
+.breadcrumb-separator {
+  margin: 0 5px;
+}
+
+/* Widgets Grid */
+.widgets-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+/* Widget Card */
+.widget-card {
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+  position: relative;
+}
+
+.widget-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
   color: #333;
 }
 
-h1 {
-  font-size: 2rem;
-  margin-bottom: 10px;
+.widget-card p {
+  font-size: 1rem;
+  color: #555;
 }
 
-p {
-  font-size: 1.2rem;
-  color: #666;
+/* Remove Button */
+.remove-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border: none;
+  background-color: #e74c3c;
+  color: white;
+  padding: 5px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+  transition: background-color 0.2s;
 }
 
-/* Overview Cards */
-.overview-cards {
-  display: flex;
-  gap: 15px;
-  margin: 20px 0;
+.remove-btn:hover {
+  background-color: #c0392b;
 }
 
-.card {
-  background: #f8f9fa;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-  flex: 1;
-  text-align: center;
-}
-
-.card h2 {
-  font-size: 1.5rem;
-  margin-bottom: 5px;
-}
-
-.card p {
-  color: #666;
-}
-
-/* Recent Activity */
-.recent-activity {
-  margin-top: 20px;
-}
-
-.recent-activity ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-.recent-activity li {
-  background: #e3f2fd;
-  padding: 10px;
-  margin: 5px 0;
-  border-radius: 5px;
+/* Hover Effect */
+.widget-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
 }

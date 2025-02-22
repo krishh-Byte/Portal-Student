@@ -6,7 +6,8 @@ function Sidebar() {
   return (
     <div className="sidebar">
       <ul>
-        <li onClick={() => navigate("/")}>Home</li>
+        <li onClick={() => navigate("/")}>Dashboard</li>
+
         <li onClick={() => navigate("/courses")}>Courses</li>
         <li onClick={() => navigate("/cgpa")}>CGPA</li>
         <li onClick={() => navigate("/assignments")}>Assignments</li>
