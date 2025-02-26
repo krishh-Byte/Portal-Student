@@ -4,8 +4,6 @@ import Breadcrumb from './Breadcrumb';
 function Courses({ enrollCourse, enrolledCourses, removeCourse }) {
   const [newCourse, setNewCourse] = useState({ id: '', name: '', credit: '', grade: '' });
   const initialCourses = [
-    { id: 'C101', name: 'Mathematics', credit: '3', grade: 'A' },
-    { id: 'C102', name: 'Physics', credit: '4', grade: 'B+' },
     { id: 'C103', name: 'Computer Science', credit: '3', grade: 'A-' }
   ];
 

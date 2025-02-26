@@ -11,8 +11,6 @@ function Cgpa({ enrolledCourses }) {
     const gradePoint = gradeToPoint[course.grade] || 0.0;
     const credit = parseFloat(course.credit) || 0.0;
 
-    // Debugging logs to verify calculations
-    console.log(`Course: ${course.name}, Credit: ${credit}, Grade: ${course.grade}, Grade Point: ${gradePoint}`);
     
     return acc + (credit * gradePoint);
   }, 0);

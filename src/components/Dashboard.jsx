@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
 import Breadcrumb from './Breadcrumb'; // ✅ Use the reusable Breadcrumb component
 import widgetsData from '../widgetData.json';
 
@@ -22,7 +21,7 @@ const Dashboard = ({ enrolledCourses }) => {
             return acc + (course.credit * gradePoint);
         }, 0);
 
-        const totalCredits = enrolledCourses.reduce((acc, course) => acc + course.credit, 0);
+        const totalCredits = enrolledCourses.reduce((acc, course) => acc + parseFloat(course.credit), 0);
         return totalCredits > 0 ? (totalPoints / totalCredits).toFixed(2) : '0.00';
     };
 
@@ -45,8 +44,7 @@ const Dashboard = ({ enrolledCourses }) => {
 
     return (
         <div className="dashboard-container">
-            <Breadcrumb /> {/* ✅ Use the consistent breadcrumb component */}
-
+            <Breadcrumb />
             <div className="widgets-grid">
                 <button onClick={() => {
                     const newId = widgets.length + 1; // Generate a new ID
@@ -56,7 +54,7 @@ const Dashboard = ({ enrolledCourses }) => {
                 {widgets.map((widget) => (
                     <div key={widget.id} className="widget-card">
                         <h3>{widget.title}</h3>
-                        <p>{widget.content}</p> {/* ✅ Use widget.content instead of widget.value */}
+                        <p>{widget.content}</p>
                         <button onClick={() => removeWidget(widget.id)} className="remove-btn">Remove</button>
                     </div>
                 ))}
