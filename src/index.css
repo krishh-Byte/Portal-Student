@@ -96,8 +96,6 @@ body {
 }
 
 
-
-
 /* Main Container - Holds Sidebar + Content */
 .main-container {
   display: flex;
@@ -118,7 +116,7 @@ body {
 .sidebar {
   width: 200px;
   height: calc(100vh - 50px); /* Full height minus navbar */
-  background-color: #102b6bd4; 
+  background-color: #102b6bde; 
   color: white;
   padding-top: 30px;
   position: fixed;
@@ -157,63 +155,6 @@ body {
   max-width: 800px;
   margin: 0 auto;
 }
-
-.add-course {
-  background: white;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  border-radius: 10px;
-  margin-bottom: 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.input-field {
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 16px;
-}
-
-.add-btn {
-  background-color: #007bff;
-  color: white;
-  padding: 10px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.add-btn:hover {
-  background-color: #0056b3;
-}
-
-.courses-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 20px;
-}
-
-.courses-table th, .courses-table td {
-  padding: 10px;
-  text-align: left;
-  border-bottom: 1px solid #ddd;
-}
-
-.delete-btn {
-  background-color: #e74c3c;
-  color: white;
-  border: none;
-  padding: 5px 10px;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.delete-btn:hover {
-  background-color: #c0392b;
-}
-
 
 .assignments-container {
   width: 90%;
@@ -286,8 +227,6 @@ h2 {
   /* background-color: #e6fffa; */
 }
 
-
-
 /* CGPA Container */
 .cgpa-container {
   width: 80%;
@@ -346,8 +285,6 @@ h2 {
 .odd-row {
   background-color: #ffffff;
 }
-
-
 
 /* Courses Component Styling */
 
@@ -463,7 +400,7 @@ h2, h3 {
   min-height: 100vh;
 }
 
-/* Breadcrumb */
+
 /* Breadcrumb */
 .breadcrumb {
   display: flex;
@@ -484,10 +421,10 @@ h2, h3 {
 }
 
 .breadcrumb a {
-  color: #007bff; /* Link color */
+  color: #007bff; 
   text-decoration: none;
   transition: color 0.2s;
-}
+} 
 
 .breadcrumb a:hover {
   color: #0056b3; /* Darker color on hover */

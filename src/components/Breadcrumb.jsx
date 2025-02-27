@@ -12,7 +12,7 @@ const Breadcrumb = () => {
           <Link to="/" className={location.pathname === '/' ? 'text-muted' : ''}>
             Dashboard
           </Link>
-          {pathnames.length > 0 && <span className="breadcrumb-separator"> / </span>}
+          {pathnames.length > 0 && <span className="breadcrumb-separator">/</span>}
         </li>
         {pathnames.map((value, index) => {
           const to = `/${pathnames.slice(0, index + 1).join('/')}`;
